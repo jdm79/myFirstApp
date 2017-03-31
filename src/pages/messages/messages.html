@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Messages</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--
+<ion-content padding>
+<ion-item *ngFor="let post of posts">
+<img src= {{post.data.thumbnail}} >
+
+<h2>{{ post.data.title }}</h2>
+<h5>{{ post.data.author }}</h5>
+<h5><span am-time-ago="story.date_creation | amFromUnix"></span></h5>
+
+
+</ion-item>
+</ion-content>
+-->
+
+<ion-content>
+
+  <button ion-item *ngFor="let post of posts" (click)="itemSelected(item)" item-text-wrap>
+    <ion-avatar item-left>
+      <img src= {{post.data.thumbnail}} >
+    </ion-avatar>
+    <h2>{{ post.data.title }}</h2>
+    <h5>{{ post.data.author }}</h5>
+    <p>{{ post.data.created_utc }}</p>
+  </button>
+
+
+</ion-content>
