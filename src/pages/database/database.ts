@@ -1,19 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
-/*
-  Generated class for the Database page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-database',
   templateUrl: 'database.html'
 })
 export class DatabasePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ionicStorage: IonicStorageModule ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DatabasePage');
